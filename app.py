@@ -7,7 +7,7 @@ pathlib.PosixPath = pathlib.WindowsPath
 
 app = Flask(__name__)
 
-learner = load_learner(r'FMA-SIH\flood_classifier.pkl')
+learner = load_learner(r'flood_classifier.pkl')
 categories = ["Normal","Flood"]
 
 def infer_image(image_data):

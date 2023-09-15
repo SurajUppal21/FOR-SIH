@@ -2,8 +2,8 @@ from flask import Flask, request, jsonify
 from fastai.vision.all import *
 import pathlib
 
-temp = pathlib.PosixPath
-pathlib.PosixPath = pathlib.WindowsPath
+# temp = pathlib.PosixPath
+# pathlib.PosixPath = pathlib.WindowsPath
 
 app = Flask(__name__)
 
@@ -37,7 +37,7 @@ def api_predict():
     except Exception as e:
         return jsonify({"error": str(e)})
     
-pathlib.PosixPath = temp
+# pathlib.PosixPath = temp
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8080, debug=True)
